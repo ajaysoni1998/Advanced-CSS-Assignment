@@ -1,0 +1,48 @@
+<!-- The var() function in CSS is used to define and use custom CSS variables, also known as CSS custom properties. These
+variables allow you to store and reuse values throughout your CSS code, providing more flexibility and maintainability
+for your styles. The primary purposes of using the var() function in CSS are:
+
+Reusability: You can define a value in one place and use it in multiple locations throughout your CSS. This makes it
+easy to maintain and update styles across your entire website or application by modifying the value in just one place
+(the variable definition).
+
+Consistency: Using CSS variables helps maintain design consistency. For example, you can define variables for colors,
+typography settings, spacing, or other design elements. This ensures that you use the same colors, font sizes, or 
+spacing throughout your site, which can improve the overall look and feel.
+
+Theming: CSS variables are particularly useful for theming or creating different visual styles for your website or 
+application. By changing the values of CSS variables, you can easily switch between different themes or styles without
+needing to rewrite your entire CSS. 
+
+Code Solution -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        :root {
+            --primaryColor : #00b7ff;
+            --secondaryColor:#6c757d;
+        }
+        button{
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px 20px;
+        }
+        #primaryBtn{
+            background-color: var(--primaryColor);
+        }
+        #secondaryBtn{
+            background-color: var(--secondaryColor);
+        }
+    </style>
+</head>
+<body>
+    <button id="primaryBtn">Primary Button</button>
+    <button id="secondaryBtn">Secondary Button</button>
+</body>
+</html>
